@@ -23,16 +23,18 @@ variable "name" {
 variable "description" {
   type        = string
   description = "Description of NTP Policy"
+  default     = ""
 }
 
 variable "enabled" {
   type        = bool
-  description = "Policy Enabled or Not"
+  description = "Policy Enabled or Disabled"
 }
 
 variable "ntp_servers" {
   type        = list(string)
   description = "List of NTP Servers"
+  default     = []
 }
 
 variable "timezone" {
@@ -48,4 +50,5 @@ variable "org_moid" {
 variable "tags" {
   type        = list(map(string))
   description = "Policy Tags"
+  default     = []
 }
